@@ -8,10 +8,10 @@
     :pagination="false"
     :scroll="{ x: 'max-content' }"
   >
-    <template #index="{index}">
+    <template #index="{ index }">
       {{ ++index }}
     </template>
-    <template #customTitle="{record}">
+    <template #customTitle="{ record }">
       <a :href="record.link">{{ record.title }}</a>
     </template>
   </a-table>
@@ -58,7 +58,7 @@ export default defineComponent({
   },
   created() {
     const { data } = Mock.mock({
-      'data|20': [
+      'data|100': [
         {
           id: '5fb24f7efeff501e945fef58',
           title: Random.string(20),
